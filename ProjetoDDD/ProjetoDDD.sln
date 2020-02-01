@@ -15,25 +15,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Infrastructure", "5-Infra
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{05A38670-D47F-4181-86EF-F4A5C1608EC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoDDD.Infrastructure.Data", "ProjetoDDD.Infrastructure.Data\ProjetoDDD.Infrastructure.Data.csproj", "{CA53D1D2-F037-4AE7-9BCF-C553909170DC}"
-EndProject
 Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CA53D1D2-F037-4AE7-9BCF-C553909170DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CA53D1D2-F037-4AE7-9BCF-C553909170DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CA53D1D2-F037-4AE7-9BCF-C553909170DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CA53D1D2-F037-4AE7-9BCF-C553909170DC}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{05A38670-D47F-4181-86EF-F4A5C1608EC7} = {C5A614AB-5B36-4F90-834C-A6F1D13E398F}
-		{CA53D1D2-F037-4AE7-9BCF-C553909170DC} = {05A38670-D47F-4181-86EF-F4A5C1608EC7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {319F5F45-1D23-46BB-96C7-B969C5D6D240}
