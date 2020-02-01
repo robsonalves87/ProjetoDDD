@@ -127,6 +127,11 @@
     <Compile Include="Context\ProjetoDDDContext.cs" />
     <Compile Include="Mappings\ClienteMap.cs" />
     <Compile Include="Mappings\ProdutoMap.cs" />
+    <Compile Include="Migrations\20200201224844_Inicial.cs" />
+    <Compile Include="Migrations\20200201224844_Inicial.designer.cs">
+      <DependentUpon>20200201224844_Inicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ProjetoDDDContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
