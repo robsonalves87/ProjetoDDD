@@ -74,6 +74,8 @@ namespace ProjetoDDD.MVC.Controllers
             {
                 var cliente = Mapper.Map<ClienteViewModel, Cliente>(clienteViewModel);
                 _clienteAppService.Atualizar(cliente);
+                _clienteAppService.SaveChanges();
+                _clienteAppService.Dispose();
 
                 return RedirectToAction("Index");
             }
@@ -97,6 +99,8 @@ namespace ProjetoDDD.MVC.Controllers
         {
             var cliente = _clienteAppService.BuscaPorId(id);
             _clienteAppService.Excluir(cliente);
+            _clienteAppService.SaveChanges();
+            _clienteAppService.Dispose();
 
             return RedirectToAction("Index");
         }

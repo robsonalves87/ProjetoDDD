@@ -132,6 +132,10 @@
     <Compile Include="Migrations\20200202001648_Inicial.designer.cs">
       <DependentUpon>20200202001648_Inicial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20200202191046_Alterar_Categorias_Produtos.cs" />
+    <Compile Include="Migrations\20200202191046_Alterar_Categorias_Produtos.designer.cs">
+      <DependentUpon>20200202191046_Alterar_Categorias_Produtos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ProjetoDDDContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\CategoriaDoProdutoRepository.cs" />

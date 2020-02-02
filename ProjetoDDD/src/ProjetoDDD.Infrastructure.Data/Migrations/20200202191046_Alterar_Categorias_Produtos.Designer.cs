@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using ProjetoDDD.Infrastructure.Data.Context;
 
 namespace ProjetoDDD.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ProjetoDDDContext))]
-    partial class ProjetoDDDContextModelSnapshot : ModelSnapshot
+    [Migration("20200202191046_Alterar_Categorias_Produtos")]
+    partial class Alterar_Categorias_Produtos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
