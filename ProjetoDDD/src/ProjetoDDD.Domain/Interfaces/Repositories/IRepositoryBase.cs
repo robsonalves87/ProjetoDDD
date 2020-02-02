@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Linq;
+using System.Collections.Generic;
 
 namespace ProjetoDDD.Domain.Interfaces.Repositories
 {
@@ -8,8 +8,8 @@ namespace ProjetoDDD.Domain.Interfaces.Repositories
         void Incluir(TEntity obj);
         void Atualizar(TEntity obj);
         void Excluir(TEntity obj);
-        IQueryable<TEntity> BuscarTodos();
-        TEntity BuscaPorId(int id);
+        IList<TEntity> BuscarTodos();
+        TEntity BuscaPorId(Guid id);
         int SaveChanges();
 
     }

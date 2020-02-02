@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using ProjetoDDD.Application.Interfaces;
 using ProjetoDDD.Domain.Interfaces.Services;
 
@@ -33,14 +34,14 @@ namespace ProjetoDDD.Application.Services
             _serviceBase.Excluir(obj);
         }
 
-        public IQueryable BuscarTodos()
+        public IList<TEntity> BuscarTodos()
         {
             return _serviceBase.BuscarTodos();
         }
 
-        public TEntity BuscaPorId(int id)
+        public TEntity BuscaPorId(Guid id)
         {
-            return _serviceBase.BuscaPorId();
+            return _serviceBase.BuscaPorId(id);
         }
 
         public int SaveChanges()

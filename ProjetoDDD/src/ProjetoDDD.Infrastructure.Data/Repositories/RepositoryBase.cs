@@ -1,4 +1,6 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using ProjetoDDD.Domain.Interfaces.Repositories;
 using ProjetoDDD.Infrastructure.Data.Context;
@@ -36,12 +38,12 @@ namespace ProjetoDDD.Infrastructure.Data.Repositories
             dbSet.Remove(obj);
         }
 
-        public virtual IQueryable<TEntity> BuscarTodos()
+        public virtual IList<TEntity> BuscarTodos()
         {
-            return dbSet;
+            return dbSet.ToList();
         }
 
-        public virtual TEntity BuscaPorId(int id)
+        public virtual TEntity BuscaPorId(Guid id)
         {
             return dbSet.Find(id);
         }

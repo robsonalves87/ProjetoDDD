@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
 using ProjetoDDD.Domain.Interfaces.Repositories;
 using ProjetoDDD.Domain.Interfaces.Services;
 
@@ -28,12 +29,12 @@ namespace ProjetoDDD.Domain.Services
             _repository.Excluir(obj);
         }
 
-        public virtual IQueryable BuscarTodos()
+        public virtual IList<TEntity> BuscarTodos()
         {
             return _repository.BuscarTodos();
         }
 
-        public virtual TEntity BuscaPorId(int id)
+        public virtual TEntity BuscaPorId(Guid id)
         {
             return _repository.BuscaPorId(id);
         }
