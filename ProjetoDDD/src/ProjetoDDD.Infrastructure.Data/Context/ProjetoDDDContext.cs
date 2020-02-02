@@ -10,6 +10,7 @@ namespace ProjetoDDD.Infrastructure.Data.Context
     {
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Produto> Produtos { get; set; }
+        public DbSet<CategoriaDoProduto> CategoriasProdutos { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -21,6 +22,7 @@ namespace ProjetoDDD.Infrastructure.Data.Context
         {
             modelBuilder.ApplyConfiguration(new ClienteMap());
             modelBuilder.ApplyConfiguration(new ProdutoMap());
+            modelBuilder.ApplyConfiguration(new CategoriaDoProdutoMap());
         }
 
         public override int SaveChanges()

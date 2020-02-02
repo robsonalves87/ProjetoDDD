@@ -4,25 +4,21 @@ using ProjetoDDD.Domain.Models;
 
 namespace ProjetoDDD.Infrastructure.Data.Mappings
 {
-    public class ProdutoMap : IEntityTypeConfiguration<Produto>
+    public class CategoriaDoProdutoMap : IEntityTypeConfiguration<CategoriaDoProduto>
     {
-        public void Configure(EntityTypeBuilder<Produto> builder)
+        public void Configure(EntityTypeBuilder<CategoriaDoProduto> builder)
         {
-            builder.Property(p => p.Id)
+            builder.Property(cp => cp.Id)
                 .HasColumnName("Id");
 
-            builder.Property(p => p.Nome)
+            builder.Property(cp => cp.Nome)
                 .HasColumnType("varchar(150)")
                 .HasMaxLength(150)
                 .IsRequired();
 
-            builder.Property(p => p.Descricao)
+            builder.Property(cp => cp.Descricao)
                 .HasColumnType("varchar(500)")
-                .HasMaxLength(500)
-                .IsRequired();
-
-            builder.Property(p => p.Valor)
-                .IsRequired();
+                .HasMaxLength(500);
         }
     }
 }

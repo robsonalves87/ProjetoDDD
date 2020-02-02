@@ -19,6 +19,26 @@ namespace ProjetoDDD.Infrastructure.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("ProjetoDDD.Domain.Models.CategoriaDoProduto", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id");
+
+                    b.Property<string>("Descricao")
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500);
+
+                    b.Property<string>("Nome")
+                        .IsRequired()
+                        .HasColumnType("varchar(150)")
+                        .HasMaxLength(150);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("CategoriasProdutos");
+                });
+
             modelBuilder.Entity("ProjetoDDD.Domain.Models.Cliente", b =>
                 {
                     b.Property<Guid>("Id")
@@ -71,6 +91,8 @@ namespace ProjetoDDD.Infrastructure.Data.Migrations
 
                     b.Property<bool>("Ativo");
 
+                    b.Property<Guid>("CategoriaProdutoId");
+
                     b.Property<DateTime>("DataInclusao");
 
                     b.Property<string>("Descricao")
@@ -87,7 +109,17 @@ namespace ProjetoDDD.Infrastructure.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CategoriaProdutoId");
+
                     b.ToTable("Produtos");
+                });
+
+            modelBuilder.Entity("ProjetoDDD.Domain.Models.Produto", b =>
+                {
+                    b.HasOne("ProjetoDDD.Domain.Models.CategoriaDoProduto", "CategoriaProduto")
+                        .WithMany()
+                        .HasForeignKey("CategoriaProdutoId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }

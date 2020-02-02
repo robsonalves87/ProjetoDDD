@@ -125,11 +125,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\ProjetoDDDContext.cs" />
+    <Compile Include="Mappings\CategoriaDoProdutoMap.cs" />
     <Compile Include="Mappings\ClienteMap.cs" />
     <Compile Include="Mappings\ProdutoMap.cs" />
-    <Compile Include="Migrations\20200201224844_Inicial.cs" />
-    <Compile Include="Migrations\20200201224844_Inicial.designer.cs">
-      <DependentUpon>20200201224844_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\20200202001648_Inicial.cs" />
+    <Compile Include="Migrations\20200202001648_Inicial.designer.cs">
+      <DependentUpon>20200202001648_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ProjetoDDDContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
