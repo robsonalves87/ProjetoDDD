@@ -1,16 +1,15 @@
 ﻿using System;
 using System.Linq;
 
-namespace ProjetoDDD.Domain.Interfaces.Repositories
+namespace ProjetoDDD.Application.Interfaces
 {
-    public interface IRepositoryBase<TEntity> : IDisposable where TEntity : class
+    public interface IAppServiceBase<TEntity> : IDisposable where TEntity : class
     {
         void Incluir(TEntity obj);
         void Atualizar(TEntity obj);
         void Excluir(TEntity obj);
-        IQueryable<TEntity> BuscarTodos();
+        IQueryable BuscarTodos();
         TEntity BuscaPorId(int id);
         int SaveChanges();
-
     }
 }
