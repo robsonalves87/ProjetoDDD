@@ -43,6 +43,12 @@ namespace ProjetoDDD.Infrastructure.Data.Repositories
             return dbSet.ToList();
         }
 
+        //BuscarTodosAtivos direto do banco
+        public virtual IList<TEntity> BuscarTodosAtivos()
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual TEntity BuscaPorId(Guid id)
         {
             return dbSet.Find(id);

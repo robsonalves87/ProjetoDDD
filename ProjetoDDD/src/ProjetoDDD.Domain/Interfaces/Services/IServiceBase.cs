@@ -9,6 +9,7 @@ namespace ProjetoDDD.Domain.Interfaces.Services
         void Atualizar(TEntity obj);
         void Excluir(TEntity obj);
         IList<TEntity> BuscarTodos();
+        IList<TEntity> BuscarTodosAtivos();
         TEntity BuscaPorId(Guid id);
         int SaveChanges();
     }

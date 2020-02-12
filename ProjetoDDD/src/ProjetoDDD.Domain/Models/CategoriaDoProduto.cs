@@ -16,5 +16,11 @@ namespace ProjetoDDD.Domain.Models
         public string Nome { get; set; }
         public string Descricao { get; set; }
         public bool Ativo { get; set; }
+
+        //Categoria ativas por regra de negocio
+        public bool CategoriaDoProdutoAtiva(CategoriaDoProduto categoriaDoProduto)
+        {
+            return categoriaDoProduto.Ativo;
+        }
     }
 }

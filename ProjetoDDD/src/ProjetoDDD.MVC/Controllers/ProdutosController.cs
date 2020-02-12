@@ -38,7 +38,7 @@ namespace ProjetoDDD.MVC.Controllers
         // GET: Clientes/Create
         public ActionResult Create()
         {
-            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.BuscarTodos(), "Id", "Nome");
+            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.ObterCategoriasDoProdutoAtivas(), "Id", "Nome");
             return View();
         }
 
@@ -57,7 +57,7 @@ namespace ProjetoDDD.MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.BuscarTodos(), "Id", "Nome");
+            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.ObterCategoriasDoProdutoAtivas(), "Id", "Nome");
             return View(produtoViewModel);
         }
 
@@ -67,7 +67,7 @@ namespace ProjetoDDD.MVC.Controllers
             var produto = _produtoAppService.BuscaPorId(id);
             var produtoViewModel = Mapper.Map<Produto, ProdutoViewModel>(produto);
 
-            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.BuscarTodos(), "Id", "Nome");
+            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.ObterCategoriasDoProdutoAtivas(), "Id", "Nome");
             return View(produtoViewModel);
         }
 
@@ -86,7 +86,7 @@ namespace ProjetoDDD.MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.BuscarTodos(), "Id", "Nome");
+            ViewBag.CategoriaProdutoId = new SelectList(_categoriaDoProdutoAppService.ObterCategoriasDoProdutoAtivas(), "Id", "Nome");
             return View(produtoViewModel);
         }
 

@@ -9,6 +9,9 @@ namespace ProjetoDDD.Application.Interfaces
         void Atualizar(TEntity obj);
         void Excluir(TEntity obj);
         IList<TEntity> BuscarTodos();
+        
+        //BuscarTodosAtivos direto do banco
+        IList<TEntity> BuscarTodosAtivos();
         TEntity BuscaPorId(Guid id);
         int SaveChanges();
     }

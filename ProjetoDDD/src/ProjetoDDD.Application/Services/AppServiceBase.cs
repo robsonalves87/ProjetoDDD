@@ -39,6 +39,12 @@ namespace ProjetoDDD.Application.Services
             return _serviceBase.BuscarTodos();
         }
 
+        //BuscarTodosAtivos direto do banco
+        public IList<TEntity> BuscarTodosAtivos()
+        {
+            return _serviceBase.BuscarTodosAtivos();
+        }
+
         public TEntity BuscaPorId(Guid id)
         {
             return _serviceBase.BuscaPorId(id);

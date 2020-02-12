@@ -34,6 +34,11 @@ namespace ProjetoDDD.Domain.Services
             return _repository.BuscarTodos();
         }
 
+        public virtual IList<TEntity> BuscarTodosAtivos()
+        {
+            return _repository.BuscarTodosAtivos();
+        }
+
         public virtual TEntity BuscaPorId(Guid id)
         {
             return _repository.BuscaPorId(id);

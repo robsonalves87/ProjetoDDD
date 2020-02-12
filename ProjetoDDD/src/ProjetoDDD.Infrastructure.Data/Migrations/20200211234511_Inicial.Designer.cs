@@ -10,7 +10,7 @@ using ProjetoDDD.Infrastructure.Data.Context;
 namespace ProjetoDDD.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ProjetoDDDContext))]
-    [Migration("20200202001648_Inicial")]
+    [Migration("20200211234511_Inicial")]
     partial class Inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -26,6 +26,8 @@ namespace ProjetoDDD.Infrastructure.Data.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnName("Id");
+
+                    b.Property<bool>("Ativo");
 
                     b.Property<string>("Descricao")
                         .HasColumnType("varchar(500)")

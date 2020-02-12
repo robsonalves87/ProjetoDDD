@@ -10,11 +10,12 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjetoDDD.Infrastructure.Data</RootNamespace>
     <AssemblyName>ProjetoDDD.Infrastructure.Data</AssemblyName>
-    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -128,13 +129,9 @@
     <Compile Include="Mappings\CategoriaDoProdutoMap.cs" />
     <Compile Include="Mappings\ClienteMap.cs" />
     <Compile Include="Mappings\ProdutoMap.cs" />
-    <Compile Include="Migrations\20200202001648_Inicial.cs" />
-    <Compile Include="Migrations\20200202001648_Inicial.designer.cs">
-      <DependentUpon>20200202001648_Inicial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20200202191046_Alterar_Categorias_Produtos.cs" />
-    <Compile Include="Migrations\20200202191046_Alterar_Categorias_Produtos.designer.cs">
-      <DependentUpon>20200202191046_Alterar_Categorias_Produtos.cs</DependentUpon>
+    <Compile Include="Migrations\20200211234511_Inicial.cs" />
+    <Compile Include="Migrations\20200211234511_Inicial.designer.cs">
+      <DependentUpon>20200211234511_Inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ProjetoDDDContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

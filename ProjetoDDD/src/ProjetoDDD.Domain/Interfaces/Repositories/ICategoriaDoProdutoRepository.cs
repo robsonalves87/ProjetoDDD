@@ -1,4 +1,5 @@
 ﻿using ProjetoDDD.Domain.Models;
+using System.Collections;
 
 namespace ProjetoDDD.Domain.Interfaces.Repositories
 {

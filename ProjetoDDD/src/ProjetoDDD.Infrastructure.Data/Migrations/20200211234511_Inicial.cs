@@ -13,7 +13,8 @@ namespace ProjetoDDD.Infrastructure.Data.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Nome = table.Column<string>(type: "varchar(150)", maxLength: 150, nullable: false),
-                    Descricao = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true)
+                    Descricao = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true),
+                    Ativo = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {

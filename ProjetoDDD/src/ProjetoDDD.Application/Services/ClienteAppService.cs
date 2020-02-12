@@ -1,6 +1,7 @@
 ﻿using ProjetoDDD.Application.Interfaces;
 using ProjetoDDD.Domain.Interfaces.Services;
 using ProjetoDDD.Domain.Models;
+using System.Collections.Generic;
 
 namespace ProjetoDDD.Application.Services
 {
