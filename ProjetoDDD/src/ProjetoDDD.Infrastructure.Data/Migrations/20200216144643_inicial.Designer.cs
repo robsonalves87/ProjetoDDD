@@ -10,8 +10,8 @@ using ProjetoDDD.Infrastructure.Data.Context;
 namespace ProjetoDDD.Infrastructure.Data.Migrations
 {
     [DbContext(typeof(ProjetoDDDContext))]
-    [Migration("20200211234511_Inicial")]
-    partial class Inicial
+    [Migration("20200216144643_inicial")]
+    partial class inicial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

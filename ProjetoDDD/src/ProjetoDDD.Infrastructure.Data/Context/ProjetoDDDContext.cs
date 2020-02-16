@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using ProjetoDDD.Domain.Models;
@@ -15,7 +16,7 @@ namespace ProjetoDDD.Infrastructure.Data.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
-                .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=ProjetoDDD;Integrated Security=True");
+                .UseSqlServer(ConfigurationManager.ConnectionStrings["ProjetoDDD_DB"].ConnectionString);
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

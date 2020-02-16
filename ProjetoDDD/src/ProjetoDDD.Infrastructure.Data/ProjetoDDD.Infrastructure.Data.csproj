@@ -97,6 +97,7 @@
       <HintPath>..\..\packages\System.ComponentModel.Annotations.4.5.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
     </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.SqlClient, Version=4.5.0.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Data.SqlClient.4.6.1\lib\net461\System.Data.SqlClient.dll</HintPath>
@@ -129,9 +130,9 @@
     <Compile Include="Mappings\CategoriaDoProdutoMap.cs" />
     <Compile Include="Mappings\ClienteMap.cs" />
     <Compile Include="Mappings\ProdutoMap.cs" />
-    <Compile Include="Migrations\20200211234511_Inicial.cs" />
-    <Compile Include="Migrations\20200211234511_Inicial.designer.cs">
-      <DependentUpon>20200211234511_Inicial.cs</DependentUpon>
+    <Compile Include="Migrations\20200216144643_inicial.cs" />
+    <Compile Include="Migrations\20200216144643_inicial.designer.cs">
+      <DependentUpon>20200216144643_inicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ProjetoDDDContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
