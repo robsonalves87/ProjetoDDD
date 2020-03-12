@@ -22,7 +22,7 @@ namespace ProjetoDDD.MVC.ViewModels
         [MinLength(11, ErrorMessage = "Minimo 11 caracteres")]
         public string CPF { get; set; }
 
-        [Required(ErrorMessage = "Preencha o Campo CPF")]
+        [Required(ErrorMessage = "Preencha o Campo RG")]
         [MaxLength(15, ErrorMessage = "Máximo 15 caracteres")]
         [MinLength(5, ErrorMessage = "Minimo 5 caracteres")]
         public string RG { get; set; }

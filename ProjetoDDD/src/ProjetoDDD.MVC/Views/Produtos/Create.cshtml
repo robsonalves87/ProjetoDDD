@@ -34,7 +34,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CategoriaProdutoId, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.DropDownList("CategoriaProdutoId", (IEnumerable<SelectListItem>)ViewBag.CategoriaProdutoId, String.Empty, new { @class = "form-control" })
+                @Html.ListBox("CategoriaProdutoId", (IEnumerable<SelectListItem>)ViewBag.CategoriaProdutoId, new { @class = "form-control selectpicker show-menu-arrow", 
+                                                                                                                   data_selected_text_format="count",
+                                                                                                                   data_actions_box="true"})
                 @Html.ValidationMessageFor(model => model.CategoriaProdutoId, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -64,6 +66,13 @@
         </div>
     </div>
 }
+<script>
+$('.selectpicker').selectpicker({
+	selectAllText: 'Marcar Todos',
+	deselectAllText: 'Desmarcar Todos'
+});
+</script>
+
 
 <div>
     @Html.ActionLink("Back to List", "Index")
